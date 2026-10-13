@@ -119,15 +119,10 @@ tr:last-child td{border-bottom:none}
 .sources ul li::before{content:'📖';position:absolute;left:0;top:0;font-size:1em}
 
 /* Кнопка вверх */
-.scroll-top{position:fixed;bottom:80px;right:20px;width:52px;height:52px;background:linear-gradient(135deg,#daa520,#8b1a1a);border:3px solid #ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;cursor:pointer;z-index:100;box-shadow:0 8px 25px rgba(0,0,0,.6);transition:all .3s;opacity:0;visibility:hidden}
+.scroll-top{position:fixed;bottom:20px;right:20px;width:52px;height:52px;background:linear-gradient(135deg,#daa520,#8b1a1a);border:3px solid #ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;cursor:pointer;z-index:100;box-shadow:0 8px 25px rgba(0,0,0,.6);transition:all .3s;opacity:0;visibility:hidden}
 .scroll-top.show{opacity:1;visibility:visible}
 .scroll-top:hover{transform:scale(1.1) translateY(-3px);box-shadow:0 12px 35px rgba(218,165,32,.8)}
 .scroll-top:active{transform:scale(.95)}
-
-/* Кнопка печати */
-.print-btn{position:fixed;bottom:20px;right:20px;width:52px;height:52px;background:linear-gradient(135deg,#daa520,#8b1a1a);border:3px solid #ffd700;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;cursor:pointer;z-index:100;box-shadow:0 8px 25px rgba(0,0,0,.6);transition:all .3s}
-.print-btn:hover{transform:scale(1.1) translateY(-3px);box-shadow:0 12px 35px rgba(218,165,32,.8)}
-.print-btn:active{transform:scale(.95)}
 
 /* Прогресс-бар прочтения */
 .reading-progress{position:fixed;top:0;left:0;right:0;height:5px;background:rgba(26,6,6,.5);z-index:200}
@@ -136,7 +131,7 @@ tr:last-child td{border-bottom:none}
 /* Печать */
 @media print{
   body{background:#fff;color:#000}
-  .heraldic-bg,.book-intro,.scroll-top,.print-btn,.reading-progress{display:none!important}
+  .heraldic-bg,.book-intro,.scroll-top,.reading-progress{display:none!important}
   .report-wrapper{padding:20px;max-width:100%}
   .report-header,.report-section,.sources{background:#fff;color:#000;border:2px solid #000;box-shadow:none;page-break-inside:avoid}
   .report-section h2,.report-header h1,.sources h2{color:#000;text-shadow:none}
@@ -340,9 +335,8 @@ tr:last-child td{border-bottom:none}
 
 </div>
 
-<!-- Кнопки -->
+<!-- Кнопка вверх -->
 <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆️</div>
-<div class="print-btn" onclick="window.print()">🖨️</div>
 
 <script>
 // ============ АНИМАЦИЯ КНИГИ ============
